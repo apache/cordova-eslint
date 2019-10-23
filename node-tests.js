@@ -17,4 +17,10 @@
     under the License.
 */
 
-module.exports = require('./node');
+module.exports = {
+    extends: [
+        './lib/base.js',
+        './lib/node.js',
+        './lib/tests.js'
+    ]
+};
