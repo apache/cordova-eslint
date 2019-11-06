@@ -1,0 +1,10 @@
+github:
+  description: "Apache Cordova - ESLint"
+  homepage: https://cordova.apache.org/
+  labels:
+    - cordova
+    - eslint
+    - javascript
+  
+  features:
+    issues: true
