@@ -6,6 +6,8 @@
   "scripts": {
     "test": "eslint ."
   },
+  "repository": "github:apache/cordova-eslint",
+  "bugs": "https://github.com/apache/cordova-eslint/issues",
   "keywords": [
     "cordova",
     "eslint"
