@@ -18,3 +18,14 @@
 -->
 
 # Release Notes for Cordova ESLint
+
+## 1.0.0 (Nov 07, 2019)
+
+* [GH-4](https://github.com/apache/cordova-eslint/pull/4) chore: updated package-lock & added RELEASENOTES.md
+* [GH-3](https://github.com/apache/cordova-eslint/pull/3) chore: add .npmignore
+* [GH-1](https://github.com/apache/cordova-eslint/pull/1) chore: added missing package repo & bug field
+* [GH-2](https://github.com/apache/cordova-eslint/pull/2) chore: add .asf.yaml
+* chore: format, lint, & add Apache license
+* Release candidate
+* chore: create eslint config for cordova@9.x
+* Initial commit
