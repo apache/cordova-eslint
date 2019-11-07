@@ -4,7 +4,10 @@
   "description": "Cordova ESLint Config",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "npm run lint && npm run test:coverage",
+    "test:e2e": "jasmine spec/e2e.spec.js",
+    "test:coverage": "nyc npm run test:e2e",
+    "lint": "eslint ."
   },
   "repository": "github:apache/cordova-eslint",
   "bugs": "https://github.com/apache/cordova-eslint/issues",
@@ -25,5 +28,15 @@
   },
   "engines": {
     "node": ">= 6"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "spec/"
+    ]
   }
 }
