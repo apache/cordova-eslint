@@ -37,7 +37,7 @@ npm i -D @cordova/eslint-config
 # In package.json
 {
   "scripts": {
-    "eslint": "eslint ."
+    "lint": "eslint ."
   }
 }
 ```
