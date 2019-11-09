@@ -37,7 +37,7 @@ npm i -D @cordova/eslint-config
 # In package.json
 {
   "scripts": {
-    "eslint": "eslint ."
+    "lint": "eslint ."
   }
 }
 ```
@@ -45,17 +45,16 @@ npm i -D @cordova/eslint-config
 ```yml
 # In .eslintrc.yml
 root: true
+
 extends: '@cordova/eslint-config/node'
-```
 
-```yml
-# In spec/.eslintrc.yml
-extends: '@cordova/eslint-config/node-tests'
-```
+overrides:
 
-```yml
-# In cordova-js-src/.eslintrc.yml
-extends: '@cordova/eslint-config/browser'
+- files: [spec/**/*.js]
+  extends: '@cordova/eslint-config/node-tests'
+
+- files: [cordova-js-src/**/*.js]
+  extends: '@cordova/eslint-config/browser'
 ```
 
 ## Reference
