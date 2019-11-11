@@ -21,7 +21,8 @@
 
 ## 2.0.0 (Nov 11, 2019)
 
-* [GH-10](https://github.com/apache/cordova-eslint/pull/10) feat: make base rules stricter & closer to semistandard
+* chore: update `node` requirement `>= 10.13.0` & `eslint@6.6.0`
+* [GH-10](https://github.com/apache/cordova-eslint/pull/10) feat: make base rules stricter & closer to `semistandard`
 * [GH-9](https://github.com/apache/cordova-eslint/pull/9) docs: use new 'overrides' directive in sample config
 * [GH-8](https://github.com/apache/cordova-eslint/pull/8) chore: update dependencies
 * [GH-7](https://github.com/apache/cordova-eslint/pull/7) chore: increment package version to 2.0.0-dev
@@ -30,11 +31,11 @@
 
 ## 1.0.0 (Nov 07, 2019)
 
-* [GH-4](https://github.com/apache/cordova-eslint/pull/4) chore: updated package-lock & added RELEASENOTES.md
-* [GH-3](https://github.com/apache/cordova-eslint/pull/3) chore: add .npmignore
+* [GH-4](https://github.com/apache/cordova-eslint/pull/4) chore: updated `package-lock` & added `RELEASENOTES.md`
+* [GH-3](https://github.com/apache/cordova-eslint/pull/3) chore: add `.npmignore`
 * [GH-1](https://github.com/apache/cordova-eslint/pull/1) chore: added missing package repo & bug field
-* [GH-2](https://github.com/apache/cordova-eslint/pull/2) chore: add .asf.yaml
+* [GH-2](https://github.com/apache/cordova-eslint/pull/2) chore: add `.asf.yaml`
 * chore: format, lint, & add Apache license
 * Release candidate
-* chore: create eslint config for cordova@9.x
+* chore: create eslint config for `cordova@9.x`
 * Initial commit
