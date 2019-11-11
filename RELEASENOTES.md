@@ -19,6 +19,15 @@
 
 # Release Notes for Cordova ESLint
 
+## 2.0.0 (Nov 11, 2019)
+
+* [GH-10](https://github.com/apache/cordova-eslint/pull/10) feat: make base rules stricter & closer to semistandard
+* [GH-9](https://github.com/apache/cordova-eslint/pull/9) docs: use new 'overrides' directive in sample config
+* [GH-8](https://github.com/apache/cordova-eslint/pull/8) chore: update dependencies
+* [GH-7](https://github.com/apache/cordova-eslint/pull/7) chore: increment package version to 2.0.0-dev
+* [GH-5](https://github.com/apache/cordova-eslint/pull/5) Test all exported configurations
+* [GH-6](https://github.com/apache/cordova-eslint/pull/6) Add GitHub Actions CI
+
 ## 1.0.0 (Nov 07, 2019)
 
 * [GH-4](https://github.com/apache/cordova-eslint/pull/4) chore: updated package-lock & added RELEASENOTES.md
