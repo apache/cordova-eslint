@@ -19,6 +19,15 @@
 
 # Release Notes for Cordova ESLint
 
+## 3.0.0 (Mar 24, 2020)
+
+* [GH-12](https://github.com/apache/cordova-eslint/pull/12) breaking: bump package version to `3.0.0-dev` & dependencies upgrade
+  * `eslint@^6.8.0`
+  * `eslint-config-standard@^14.1.1`
+  * `eslint-plugin-import@^2.20.1`
+  * `eslint-plugin-node@^11.0.0`
+* [GH-11](https://github.com/apache/cordova-eslint/pull/11) chore(dependency): drop `eslint-config-semistandard`
+
 ## 2.0.0 (Nov 11, 2019)
 
 * chore: update `node` requirement `>= 10.13.0` & `eslint@6.6.0`
