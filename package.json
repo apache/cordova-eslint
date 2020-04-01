@@ -36,6 +36,10 @@
     "all": true,
     "exclude": [
       "spec/"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
     ]
   }
 }
