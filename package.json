@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "jasmine": "^3.5.0",
-    "nyc": "^14.1.1"
+    "nyc": "^15.1.0"
   },
   "nyc": {
     "all": true,
