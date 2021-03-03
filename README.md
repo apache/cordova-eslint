@@ -21,6 +21,10 @@
 
 # @cordova/eslint-config
 
+[![NPM](https://nodei.co/npm/cordova-eslint.png)](https://nodei.co/npm/cordova-eslint/)
+
+[![Node CI](https://github.com/apache/cordova-eslint/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions?query=branch%3Amaster)
+
 This repository centralizes the ESLint configuration used for Cordova's development.
 
 ## Installation
