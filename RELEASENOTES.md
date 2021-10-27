@@ -19,6 +19,29 @@
 
 # Release Notes for Cordova ESLint
 
+## 4.0.0 (Oct 27, 2021)
+
+**Breaking:**
+
+* [GH-22](https://github.com/apache/cordova-eslint/pull/22) feat!: bump `node` engine requirement `>=12.0.0`
+* [GH-26](https://github.com/apache/cordova-eslint/pull/26) dep!: drop `eslint-plugin-standard`
+* [GH-23](https://github.com/apache/cordova-eslint/pull/23) dep!: bump eslint, configs & plugins
+  * `eslint@^7.32.0`
+  * `eslint-config-standard@^16.0.3`
+  * [GH-27](https://github.com/apache/cordova-eslint/pull/27) `eslint-plugin-import@^2.25.2`
+  * `eslint-plugin-node@^11.1.0`
+  * [GH-28](https://github.com/apache/cordova-eslint/pull/28) `eslint-plugin-promise@^5.1.1`
+
+**Other Changes:**
+
+* [GH-29](https://github.com/apache/cordova-eslint/pull/29) dep(dev): bump `jasmine@3.10.0`
+* [GH-16](https://github.com/apache/cordova-eslint/pull/16) dep(dev): bump `nyc@^15.1.0`
+* [GH-24](https://github.com/apache/cordova-eslint/pull/24) ci: fix workflow typo
+* [GH-13](https://github.com/apache/cordova-eslint/pull/13) ci: apply random missing minor changes
+* [GH-20](https://github.com/apache/cordova-eslint/pull/20) chore: rebuilt `package-lock` w/ version 2
+* [GH-18](https://github.com/apache/cordova-eslint/pull/18) chore: `npmrc`
+* chore(asf): update git notification settings
+
 ## 3.0.0 (Mar 24, 2020)
 
 * [GH-12](https://github.com/apache/cordova-eslint/pull/12) breaking: bump package version to `3.0.0-dev` & dependencies upgrade
