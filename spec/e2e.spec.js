@@ -18,15 +18,15 @@
 */
 
 const path = require('path');
-const CLIEngine = require('eslint').CLIEngine;
+const ESLint = require('eslint').ESLint;
 
 describe('Cordova ESLint configuration', () => {
     const configs = ['index', 'node-tests', 'browser', 'browser-tests'];
 
     for (const config of configs) {
         it(`loads config "${config}" without throwing`, () => {
-            expect(() => new CLIEngine({
-                configFile: path.join(__dirname, '..', `${config}.js`),
+            expect(() => new ESLint({
+                overrideConfigFile: path.join(__dirname, '..', `${config}.js`),
                 useEslintrc: false
             })).not.toThrow();
         });
