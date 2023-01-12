@@ -27,11 +27,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x, 18.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -45,6 +45,7 @@ jobs:
         env:
           CI: true
 
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v3
+        if: success()
         with:
-          fail_ci_if_error: true
+          name: ${{ runner.os }} node.js ${{ matrix.node-version }}
