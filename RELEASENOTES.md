@@ -19,6 +19,24 @@
 
 # Release Notes for Cordova ESLint
 
+## 5.0.0 (Jan 13, 2023)
+
+**Breaking:**
+
+* [GH-35](https://github.com/apache/cordova-eslint/pull/35) dep!: bump all available packages
+  * `eslint@^8.31.0`
+  * `eslint-config-standard@^17.0.0`
+  * `eslint-plugin-import@^2.27.2`
+  * `eslint-plugin-promise@^6.1.1`
+  * `jasmine@^4.5.0`
+* [GH-37](https://github.com/apache/cordova-eslint/pull/37) chore!: update node engine requirement for external users
+* [GH-34](https://github.com/apache/cordova-eslint/pull/34) chore!: bump node engine requirement >=16.0.0
+
+**Other Changes:**
+
+* [GH-33](https://github.com/apache/cordova-eslint/pull/33) ci(gh-actions): update workflow and dependencies
+* [GH-30](https://github.com/apache/cordova-eslint/pull/30) chore(deps): bump minimist from 1.2.5 to 1.2.6
+
 ## 4.0.0 (Oct 27, 2021)
 
 **Breaking:**

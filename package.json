@@ -1,6 +1,6 @@
 {
   "name": "@cordova/eslint-config",
-  "version": "5.0.0-dev",
+  "version": "5.0.0",
   "description": "Cordova ESLint Config",
   "main": "index.js",
   "scripts": {
