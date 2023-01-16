@@ -19,7 +19,7 @@
 
 # Release Notes for Cordova ESLint
 
-## 5.0.0 (Jan 13, 2023)
+## 5.0.0 (Jan 16, 2023)
 
 **Breaking:**
 
