@@ -19,6 +19,20 @@
 
 # Release Notes for Cordova ESLint
 
+## 5.1.0 (Mar 25, 2024)
+
+**Features:**
+
+* [GH-42](https://github.com/apache/cordova-eslint/pull/42) feat: disable no-var for browser usage
+
+**Chores:**
+
+* [GH-40](https://github.com/apache/cordova-eslint/pull/40)chore(deps): package-lock rebuild & GHA versions
+
+**CI:**
+
+* [GH-43](https://github.com/apache/cordova-eslint/pull/43) ci: add release audit workflow
+
 ## 5.0.0 (Jan 16, 2023)
 
 **Breaking:**
