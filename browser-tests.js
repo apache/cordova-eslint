@@ -17,14 +17,8 @@
     under the License.
 */
 
-module.exports = {
-    extends: [
-        './lib/base.js',
-        './lib/browser.js',
-        './lib/tests.js'
-    ],
-
-    globals: {
-        cordova: false
-    }
-};
+module.exports = [
+    require('./lib/base.js'),
+    require('./lib/browser.js'),
+    require('./lib/tests.js')
+];

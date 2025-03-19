@@ -25,10 +25,15 @@ describe('Cordova ESLint configuration', () => {
 
     for (const config of configs) {
         it(`loads config "${config}" without throwing`, () => {
-            expect(() => new ESLint({
-                overrideConfigFile: path.join(__dirname, '..', `${config}.js`),
-                useEslintrc: false
-            })).not.toThrow();
+            let eslinter = null;
+            expect(() => {
+                eslinter = new ESLint({
+                    overrideConfigFile: path.join(__dirname, '..', `${config}.js`)
+                });
+            }).not.toThrow();
+
+            // We have to actually invoke the linter for the config files to get parsed
+            return eslinter.lintText('');
         });
     }
 });
