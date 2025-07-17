@@ -8,7 +8,7 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#   http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
@@ -25,7 +25,7 @@
 
 [![Node CI](https://github.com/apache/cordova-eslint/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions?query=branch%3Amaster)
 
-This repository centralizes the ESLint configuration used for Cordova's development.
+This repository centralizes the ESLint configuration used for Cordova's development, specifically repositories that start with `apache/cordova-`.
 
 ## Installation
 
@@ -41,24 +41,89 @@ npm i -D @cordova/eslint-config
 # In package.json
 {
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint"
   }
 }
 ```
 
-```yml
-# In .eslintrc.yml
-root: true
+```javascript
+// In eslint.config.js
+const { defineConfig, globalIgnores } = require('eslint/config');
+const nodeConfig = require('@cordova/eslint-config/node');
+const nodeTestConfig = require('@cordova/eslint-config/node-tests');
+const browserConfig = require('@cordova/eslint-config/browser');
 
-extends: '@cordova/eslint-config/node'
+module.exports = defineConfig([
+    globalIgnores([
+        // Add files or folders to ignore...
+        // For example: exclude everything in the "coverage" directory.
+        'coverage'
+    ]),
 
-overrides:
+    // Node Linting
+    ...nodeConfig.map(config => ({
+        files: [
+            // Add files or folders to check...
+            // For example: include everything in the "lib" directory.
+            // By default, ESLint lints files with extensions .js, .mjs & .cjs.
+            'lib'
+        ],
 
-- files: [spec/**/*.js]
-  extends: '@cordova/eslint-config/node-tests'
+        // Spread each shared config to preserve its settings while extending or overriding specific properties
+        ...config
+    })),
 
-- files: [cordova-js-src/**/*.js]
-  extends: '@cordova/eslint-config/browser'
+    // Node Test Linting
+    ...nodeTestConfig.map(config => ({
+        // Add files or folders to check...
+        // For example: include everything in the "spec" directory.
+        // By default, ESLint lints files with extensions .js, .mjs & .cjs.
+        files: [
+            'spec'
+        ],
+
+        // Spread each shared config to preserve its settings while extending or overriding specific properties
+        ...config,
+
+        // Overriding Rules
+        rules: {
+            // Make sure the original rules are applied
+            ...(config.rules || {}),
+
+            // Then append or update rules
+            'prefer-promise-reject-errors': 'off'
+        }
+    })),
+
+    // Browser Linting
+    ...browserConfig.map(config => ({
+        files: [
+            // Add files or folders to check...
+            // For Example: Platforms usuall has "cordova-js-src" that comiles down into a cordova.js file to runs in the app's WebView.
+            'cordova-js-src'
+        ],
+
+        // Spread each shared config to preserve its settings while extending or overriding specific properties
+        ...config,
+
+        // Overriding Language Options
+        languageOptions: {
+
+            // Make sure the original languageOptions are applied if existing
+            ...(config?.languageOptions || {}),
+
+            // Overriding Global
+            globals: {
+                // Make sure the original languageOptions.globals are applied
+                ...(config.languageOptions?.globals || {})
+
+                // Then append or update globals
+                require: 'readonly',
+                module: 'readonly',
+            }
+        }
+    }))
+]);
 ```
 
 ## Reference
