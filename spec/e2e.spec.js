@@ -18,10 +18,10 @@
 */
 
 const path = require('path');
-const ESLint = require('eslint').ESLint;
+const { ESLint } = require('eslint');
 
 describe('Cordova ESLint configuration', () => {
-    const configs = ['index', 'node-tests', 'browser', 'browser-tests'];
+    const configs = ['index', 'node', 'node-tests', 'browser', 'browser-tests'];
 
     for (const config of configs) {
         it(`loads config "${config}" without throwing`, () => {

@@ -17,4 +17,9 @@
     under the License.
 */
 
-module.exports = require('./node.js');
+const { defineConfig } = require('eslint/config');
+const node = require('./lib/node.js');
+
+module.exports = defineConfig([
+    { ...node }
+]);
