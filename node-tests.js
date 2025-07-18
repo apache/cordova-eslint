@@ -17,10 +17,13 @@
     under the License.
 */
 
-module.exports = {
-    extends: [
-        './lib/base.js',
-        './lib/node.js',
-        './lib/tests.js'
-    ]
-};
+const { defineConfig } = require('eslint/config');
+const base = require('./lib/base.js');
+const node = require('./lib/node.js');
+const tests = require('./lib/tests.js');
+
+module.exports = defineConfig([
+    { ...base },
+    { ...node },
+    { ...tests }
+]);

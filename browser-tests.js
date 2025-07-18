@@ -17,14 +17,13 @@
     under the License.
 */
 
-module.exports = {
-    extends: [
-        './lib/base.js',
-        './lib/browser.js',
-        './lib/tests.js'
-    ],
+const { defineConfig } = require('eslint/config');
+const base = require('./lib/base.js');
+const browser = require('./lib/browser.js');
+const tests = require('./lib/tests.js');
 
-    globals: {
-        cordova: false
-    }
-};
+module.exports = defineConfig([
+    { ...base },
+    { ...browser },
+    { ...tests }
+]);

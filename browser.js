@@ -17,13 +17,11 @@
     under the License.
 */
 
-module.exports = {
-    extends: [
-        './lib/base.js',
-        './lib/browser.js'
-    ],
+const { defineConfig } = require('eslint/config');
+const base = require('./lib/base.js');
+const browser = require('./lib/browser.js');
 
-    env: {
-        commonjs: true
-    }
-};
+module.exports = defineConfig([
+    { ...base },
+    { ...browser }
+]);

@@ -18,24 +18,25 @@
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
   "dependencies": {
-    "eslint": "^8.31.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.2",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint": "^9.31.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "globals": "^16.3.0"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+    "node": ">=20.5.0"
   },
   "devDependencies": {
-    "jasmine": "^4.5.0",
-    "nyc": "^15.1.0"
+    "jasmine": "^5.8.0",
+    "nyc": "^17.1.0"
   },
   "nyc": {
     "all": true,
     "exclude": [
       "spec/",
-      "coverage/"
+      "coverage/",
+      "eslint.config.js"
     ],
     "reporter": [
       "lcov",

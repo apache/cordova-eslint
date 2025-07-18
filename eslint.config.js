@@ -18,8 +18,11 @@
 */
 
 const { defineConfig } = require('eslint/config');
-const node = require('./lib/node.js');
 
 module.exports = defineConfig([
-    { ...node }
+    require('./index.js'),
+    {
+        files: ['spec/**/*'],
+        ...require('./lib/tests.js')
+    }
 ]);
