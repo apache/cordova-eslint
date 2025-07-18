@@ -13,7 +13,7 @@
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#  KIND, either express or implied.  See the License for the
+# KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
 #
@@ -21,9 +21,11 @@
 
 # @cordova/eslint-config
 
-[![NPM](https://nodei.co/npm/cordova-eslint.png)](https://nodei.co/npm/cordova-eslint/)
+[![NPM](https://nodei.co/npm/@cordova/eslint-config.svg?style=flat&data=n,v,u&color=blue)](https://nodei.co/npm/@cordova/eslint-config/)
 
-[![Node CI](https://github.com/apache/cordova-eslint/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions?query=branch%3Amaster)
+[![Node CI](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml?query=branch%3Amaster)
+[![Release Audit](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml?query=branch%3Amaster)
+[![codecov.io](https://codecov.io/github/apache/cordova-eslint/coverage.svg?branch=master)](https://codecov.io/github/apache/cordova-eslint?branch=master)
 
 This repository centralizes the ESLint configuration used for Cordova's development, specifically repositories that start with `apache/cordova-`.
 
