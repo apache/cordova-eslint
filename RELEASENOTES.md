@@ -19,6 +19,27 @@
 
 # Release Notes for Cordova ESLint
 
+## 6.0.0 (Jul 21, 2025)
+
+**Breaking Changes:**
+
+* feat!: ESLint 9 support (#47)
+* chore!: bump node requirement `>=20.9.0` (#53)
+
+**Chores:**
+
+* chore: various updates (#52)
+  * Source Code Licese Header Formatting
+  * `README.md` badges
+* chore: replace `nyc` with `c8` (#50)
+* chore: don't list dev dependencies in `NOTICE`
+
+**CI:**
+
+* ci: update `license-checker-action` (#54)
+* ci: improved workflow (pinning, license, node permission & on blocks, codeql) (#51)
+* ci: update `codecov@v4` w/ token (#44)
+
 ## 5.1.0 (Mar 25, 2024)
 
 **Features:**
