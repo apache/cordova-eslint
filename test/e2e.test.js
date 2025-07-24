@@ -17,6 +17,9 @@
     under the License.
 */
 
+const { describe, it } = require('node:test');
+const assert = require('assert');
+
 const path = require('path');
 const { ESLint } = require('eslint');
 
@@ -26,11 +29,12 @@ describe('Cordova ESLint configuration', () => {
     for (const config of configs) {
         it(`loads config "${config}" without throwing`, () => {
             let eslinter = null;
-            expect(() => {
+
+            assert.doesNotThrow(() => {
                 eslinter = new ESLint({
                     overrideConfigFile: path.join(__dirname, '..', `${config}.js`)
                 });
-            }).not.toThrow();
+            });
 
             // We have to actually invoke the linter for the config files to get parsed
             return eslinter.lintText('');
