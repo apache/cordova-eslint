@@ -16,5 +16,5 @@
 # under the License.
 
 .*
-coverage
+lcov.info
 spec

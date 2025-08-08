@@ -25,30 +25,20 @@ on:
     branches:
       - '*'
 
-permissions:
-  contents: read
-  security-events: write
-
 jobs:
-  test:
-    name: NodeJS ${{ matrix.node-version }}
-
+  codeql:
+    name: CodeQL Analysis
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x, 22.x, 24.x]
+    permissions:
+      contents: read
+      security-events: write
 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Run environment information
-        run: |
-          node --version
-          npm --version
+          node-version: 24.x
 
       - uses: github/codeql-action/init@v3
         with:
@@ -56,15 +46,65 @@ jobs:
           queries: security-and-quality
           config: |
             paths-ignore:
-              - coverage
               - node_modules
+
+      - name: Run npm install
+        run: npm ci
+        env:
+          CI: true
+
+      - uses: github/codeql-action/analyze@v3
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: Run npm install
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Run linter
+        run: npm run lint
+        env:
+          CI: true
+
+  test:
+    name: Test NodeJS ${{ matrix.node.version }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    strategy:
+      matrix:
+        node:
+          - version: 20
+          - version: 22
+            options: --test-coverage-exclude="test/**/*.js"
+          - version: 24
+            options: --test-coverage-exclude="test/**/*.js"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node.version }}
 
       - name: Run npm install and test
         run: npm cit
         env:
           CI: true
-
-      - uses: github/codeql-action/analyze@v3
+          NODE_OPTIONS: ${{ matrix.node.options }}
 
       # v4.6.0
       - uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238
