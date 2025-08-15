@@ -21,7 +21,7 @@
 
 # @cordova/eslint-config
 
-[![NPM](https://nodei.co/npm/@cordova/eslint-config.svg?style=flat&data=n,v,u&color=blue)](https://nodei.co/npm/@cordova/eslint-config/)
+[![NPM](https://nodei.co/npm/@cordova/eslint-config.svg?style=flat&data=n,v,u&color=blue)](https://www.npmjs.com/package/@cordova/eslint-config)
 
 [![Node CI](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml?query=branch%3Amaster)
 [![Release Audit](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml?query=branch%3Amaster)
