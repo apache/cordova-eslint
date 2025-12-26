@@ -15,19 +15,4 @@
 # specific language governing permissions and limitations
 # under the License.
 
-github:
-  description: "Apache Cordova - ESLint"
-  homepage: https://cordova.apache.org/
-  labels:
-    - cordova
-    - eslint
-    - javascript
-
-  features:
-    issues: true
-
-notifications:
-  commits:              commits@cordova.apache.org
-  issues:               issues@cordova.apache.org
-  pullrequests_status:  issues@cordova.apache.org
-  pullrequests_comment: issues@cordova.apache.org
+* text=auto eol=lf
