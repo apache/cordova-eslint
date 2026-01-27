@@ -21,6 +21,17 @@
 
 # Release Notes for Cordova ESLint
 
+## 6.0.1 (Jan 27, 2026)
+
+* chore: small changes ([#60](https://github.com/apache//pull/60)) [[3270929](https://github.com/apache/cordova-eslint/commit/3270929)]
+* chore: update release audit workflow & license headers ([#59](https://github.com/apache//pull/59)) [[feee491](https://github.com/apache/cordova-eslint/commit/feee491)]
+* chore: readme, ci workflow & package-lock update ([#57](https://github.com/apache//pull/57)) [[511a461](https://github.com/apache/cordova-eslint/commit/511a461)]
+* chore: use node internal test framework ([#55](https://github.com/apache//pull/55)) [[cf4654e](https://github.com/apache/cordova-eslint/commit/cf4654e)]
+* chore: increment package version to 6.0.1-dev [[bb384d5](https://github.com/apache/cordova-eslint/commit/bb384d5)]
+* chore(ci): draft release ([#61](https://github.com/apache//pull/61)) [[f6122b8](https://github.com/apache/cordova-eslint/commit/f6122b8)]
+* chore(deps): bump `js-yaml` from 4.1.0 to 4.1.1 ([#58](https://github.com/apache//pull/58)) [[5015fdf](https://github.com/apache/cordova-eslint/commit/5015fdf)]
+* chore(deps): bump `@eslint/plugin-kit` from 0.3.3 to 0.3.4 ([#56](https://github.com/apache//pull/56)) [[9bcedb2](https://github.com/apache/cordova-eslint/commit/9bcedb2)]
+
 ## 6.0.0 (Jul 21, 2025)
 
 **Breaking Changes:**
