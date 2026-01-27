@@ -76,3 +76,7 @@ typings/
 
 # next.js build output
 .next
+
+# ASF release workspace
+.asf-release/
+!.asf-release/.gitkeep
