@@ -16,7 +16,7 @@
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
   "dependencies": {
-    "eslint": "^9.31.0",
+    "eslint": "^9.39.5",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-n": "^17.21.0",
     "eslint-plugin-promise": "^7.2.1",
