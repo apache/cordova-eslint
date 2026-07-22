@@ -21,11 +21,11 @@
 
 # @cordova/eslint-config
 
-[![NPM](https://nodei.co/npm/@cordova/eslint-config.svg?style=flat&data=n,v,u&color=blue)](https://www.npmjs.com/package/@cordova/eslint-config)
+[![npm - Latest](https://img.shields.io/npm/v/@cordova/eslint-config/latest?label=Latest%20Release%20(npm))](https://npmjs.com/package/@cordova/eslint-config)
+[![GitHub](https://img.shields.io/github/package-json/v/apache/cordova-eslint?label=Development%20(Git))](https://github.com/apache/cordova-eslint)
 
-[![Node CI](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml?query=branch%3Amaster)
-[![Release Audit](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml?query=branch%3Amaster)
-[![codecov.io](https://codecov.io/github/apache/cordova-eslint/coverage.svg?branch=master)](https://codecov.io/github/apache/cordova-eslint?branch=master)
+[![GitHub - Node Workflow](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/ci.yml?query=branch%3Amaster)
+[![GitHub - Release Audit Workflow](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml/badge.svg?branch=master)](https://github.com/apache/cordova-eslint/actions/workflows/release-audit.yml?query=branch%3Amaster)
 
 This repository centralizes the ESLint configuration used for Cordova's development, specifically repositories that start with `apache/cordova-`.
 
