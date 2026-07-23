@@ -35,12 +35,16 @@ jobs:
       security-events: write
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          node-version: 24.x
+          persist-credentials: false
+          fetch-depth: 1
 
-      - uses: github/codeql-action/init@v4
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+
+      - uses: github/codeql-action/init@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
         with:
           languages: javascript
           queries: security-and-quality
@@ -53,7 +57,7 @@ jobs:
         env:
           CI: true
 
-      - uses: github/codeql-action/analyze@v4
+      - uses: github/codeql-action/analyze@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
 
   lint:
     name: Lint
@@ -95,8 +99,12 @@ jobs:
             options: --test-coverage-exclude="test/**/*.js"
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: ${{ matrix.node.version }}
 
@@ -106,8 +114,7 @@ jobs:
           CI: true
           NODE_OPTIONS: ${{ matrix.node.options }}
 
-      # v4.6.0
-      - uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238
+      - uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
         if: success()
         with:
           name: ${{ runner.os }} node.js ${{ matrix.node-version }}
