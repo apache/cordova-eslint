@@ -52,11 +52,6 @@ jobs:
             paths-ignore:
               - node_modules
 
-      - name: Run npm install
-        run: npm ci
-        env:
-          CI: true
-
       - uses: github/codeql-action/analyze@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
 
   lint:
