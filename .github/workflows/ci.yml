@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: 24
 
-      - uses: github/codeql-action/init@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
+      - uses: github/codeql-action/init@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
         with:
           languages: javascript
           queries: security-and-quality
@@ -52,12 +52,7 @@ jobs:
             paths-ignore:
               - node_modules
 
-      - name: Run npm install
-        run: npm ci
-        env:
-          CI: true
-
-      - uses: github/codeql-action/analyze@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
+      - uses: github/codeql-action/analyze@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
 
   lint:
     name: Lint
@@ -67,8 +62,12 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24.x
 
@@ -96,8 +95,7 @@ jobs:
           - version: 22
             options: --test-coverage-exclude="test/**/*.js"
           - version: 24
-            options: --test-coverage-exclude="test/**/*.js"
-
+          - version: 26
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
