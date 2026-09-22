@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: 24
 
-      - uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+      - uses: github/codeql-action/init@b96794f015dfd88f77b49b1c93e0fa7110f94c63 # v4.38.0
         with:
           languages: javascript
           queries: security-and-quality
@@ -52,7 +52,7 @@ jobs:
             paths-ignore:
               - node_modules
 
-      - uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+      - uses: github/codeql-action/analyze@b96794f015dfd88f77b49b1c93e0fa7110f94c63 # v4.38.0
 
   lint:
     name: Lint
@@ -112,7 +112,7 @@ jobs:
           CI: true
           NODE_OPTIONS: ${{ matrix.node.options }}
 
-      - uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
+      - uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         if: success()
         with:
           name: ${{ runner.os }} node.js ${{ matrix.node-version }}
